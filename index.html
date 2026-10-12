@@ -1,79 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dure Technologies · Democratising data and the power of AI</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css" />
-<link rel="stylesheet" href="site.css" />
-<style>
-.hv2{position:relative;min-height:100vh;min-height:100svh;background:radial-gradient(90% 80% at 75% 45%,#1c0b3c 0%,#0a1733 55%,#070f24 100%);color:#fff;overflow:hidden;display:flex;align-items:center;isolation:isolate;--p:0}
-.hv2-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(193,112,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(193,112,255,.07) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(70% 70% at 70% 50%,#000,transparent 75%);-webkit-mask-image:radial-gradient(70% 70% at 70% 50%,#000,transparent 75%)}
-.hv2-stage{position:absolute;z-index:1;inset:0;opacity:0;animation:hv2In 2.4s ease .2s forwards}
-.hv2-canvas{width:100%;height:100%;display:block}
-.hv2-inner{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding:120px 48px 80px;opacity:calc(1 - var(--p) * 1.6);transform:translateY(calc(var(--p) * 80px))}
-.hv2-title{font-family:var(--font-display);font-weight:700;font-size:clamp(42px,6vw,88px);line-height:1.02;letter-spacing:-.04em;margin:0 0 28px;max-width:760px}
-.hv2-w{display:inline-block;overflow:hidden;margin-right:.24em;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em}
-.hv2-w>span{display:inline-block;transform:translateY(110%);animation:hv2Word 1s cubic-bezier(.22,1,.36,1) forwards}
-.hv2-ul{position:relative;overflow:visible;clip-path:inset(0 -4px -.2em -4px)}
-.hv2-ul::after{content:'';position:absolute;left:-2px;right:-2px;bottom:.06em;height:.11em;border-radius:3px;transform:scaleX(0);transform-origin:left;animation:hv2Bar .9s cubic-bezier(.22,1,.36,1) forwards}
-.hv2-ul.u1::after{background:var(--brand-accent);animation-delay:1.05s}
-.hv2-ul.u2>span{color:var(--yellow)}
-.hv2-ul.u2::after{background:var(--yellow);animation-delay:1.25s}
-.hv2-sub{font-size:18px;line-height:1.6;color:rgba(255,255,255,.7);max-width:470px;margin:0 0 36px;opacity:0;animation:hv2Fade 1s ease 1.1s forwards}
-.hv2-cta{display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:hv2Fade 1s ease 1.3s forwards}
-.hv2-btn{font-family:var(--font-text);font-size:14px;font-weight:600;padding:13px 24px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none;transition:transform .35s cubic-bezier(.22,1,.36,1),background .25s,box-shadow .35s}
-.hv2-btn.solid{background:var(--brand-accent);color:#fff;border:none}
-.hv2-btn.solid:hover{color:#fff;transform:translateY(-2px);box-shadow:0 14px 34px -12px rgba(105,0,159,.7)}
-.hv2-btn.solid span{transition:transform .35s}.hv2-btn.solid:hover span{transform:translateX(4px)}
-.hv2-btn.ghost{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.24);backdrop-filter:blur(6px)}
-.hv2-btn.ghost:hover{background:rgba(255,255,255,.14)}
-.hv2-route{position:absolute;z-index:2;right:48px;bottom:40px;display:flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);opacity:0;animation:hv2Fade 1s ease 1.8s forwards}
-.hv2-route i{width:7px;height:7px;border-radius:50%;background:var(--yellow);box-shadow:0 0 10px var(--yellow)}
-.hv2-route span{animation:hv2Fade .6s ease}
-.hv2-route b{color:var(--yellow);font-weight:500}
-.hv2-scroll{position:absolute;z-index:2;left:50%;bottom:30px;width:24px;height:38px;margin-left:-12px;border:1.5px solid rgba(255,255,255,.35);border-radius:14px;opacity:0;animation:hv2Fade 1s ease 2s forwards}
-.hv2-scroll span{position:absolute;left:50%;top:8px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:#fff;animation:hv2Drip 1.8s ease-in-out infinite}
-@keyframes hv2Word{to{transform:none}}
-@keyframes hv2Bar{to{transform:scaleX(1)}}
-@keyframes hv2Fade{from{opacity:0}to{opacity:1}}
-@keyframes hv2In{from{opacity:0;filter:blur(8px)}to{opacity:1;filter:none}}
-@keyframes hv2Drip{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
-@media(max-width:900px){.hv2{align-items:flex-end}.hv2-stage{right:-20vw;width:120vw;height:60%;bottom:auto}.hv2-inner{padding:0 24px 90px}.hv2-route{right:24px;bottom:24px}.hv2-scroll{display:none}}
-@media(prefers-reduced-motion:reduce){.hv2 *{animation-duration:.01ms!important;animation-delay:0s!important}}
-</style>
+<meta charset="utf-8">
+<title>Dure Technologies</title>
+<meta http-equiv="refresh" content="0; url=github-pages-v2/">
+<link rel="canonical" href="https://rosiejarrett.github.io/github-pages-v2/">
+<script>location.replace('github-pages-v2/' + location.hash);</script>
 </head>
 <body>
-<div id="root"></div>
-
-<script type="application/json" id="tweak-defaults">
-/*EDITMODE-BEGIN*/{
-  "palette": "dure",
-  "accent": "#69009f",
-  "demoAutoplay": true,
-  "lang": "en"
-}/*EDITMODE-END*/
-</script>
-
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-
-<script src="image-slot.js"></script>
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-<script type="text/babel" src="i18n.jsx"></script>
-<script type="text/babel" src="hero.jsx"></script>
-<script type="text/babel" src="mockups.jsx"></script>
-<script type="text/babel" src="poe-mock.jsx"></script>
-<script type="text/babel" src="odc-mock.jsx"></script>
-<script type="text/babel" src="elearning-mock.jsx"></script>
-<script type="text/babel" src="data.jsx"></script>
-<script type="text/babel" src="sections.jsx"></script>
-<script type="text/babel" src="hero-v2.jsx"></script>
-<script type="text/babel" src="products.jsx"></script>
-<script type="text/babel" src="app.jsx"></script>
+<p><a href="github-pages-v2/">Continue to Dure Technologies</a></p>
 </body>
 </html>
